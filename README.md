@@ -1,6 +1,6 @@
 # Open-Aquarium
 
-[project blog](http://anzumana.github.io/Open-Aquarium/)
+[Project Website](http://anzumana.github.io/Open-Aquarium/)
 
 [hackaday aquaponics](http://hackaday.io/project/2190-aquapionics)
 [open quarium fish tank monitoring and aquaponics platform for arduino](http://www.cooking-hacks.com/blog/we-launch-open-aquarium-fish-tank-monitoring-and-aquaponics-platform-for-arduino)
