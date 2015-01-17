@@ -2,10 +2,20 @@
 
 [Project Website](http://anzumana.github.io/Open-Aquarium/)
 
+<<<<<<< HEAD
 [hackaday aquaponics](http://hackaday.io/project/2190-aquapionics) t
 [open quarium fish tank monitoring and aquaponics platform for arduino](http://www.cooking-hacks.com/blog/we-launch-open-aquarium-fish-tank-monitoring-and-aquaponics-platform-for-arduino)
+=======
+[hackaday aquaponics](http://hackaday.io/project/2190-aquapionics)
+
+[open quarium fish tank monitoring and aquaponics platform for
+arduino](http://www.cooking-hacks.com/blog/we-launch-open-aquarium-fish-tank-monitoring-and-aquaponics-platform-for-arduino)
+
+>>>>>>> 71a5dd4a7cf9b4fe42cef40d1a0fe6f3069cad24
 [open aquarium basic](http://www.cooking-hacks.com/open-aquarium-basic)
+
 [instructables](http://www.instructables.com/)
+
 [makezine](http://makezine.com/projects/)
 
 -----
