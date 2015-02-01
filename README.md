@@ -1,8 +1,14 @@
 # Open-Aquarium
 
 [Project Website](http://anzumana.github.io/Open-Aquarium/)
+
 [hueboard Link for Open-Aquarium to see whats being worked on at the moment](https://huboard.com/Anzumana/Open-Aquarium)
+
 [hueboard explantion gifs](https://gist.github.com/rauhryan/5f3eeb75fe1237a02a26)
+
+----
+Here are some links to projects for inspiration.
+Aswell as some community sites.
 
 [hackaday aquaponics](http://hackaday.io/project/2190-aquapionics) 
 
