@@ -1,0 +1,37 @@
+int incoming = 0 ;
+
+void setup() {
+  Serial.println("Lampe mach was");
+  Serial.begin(9600);     // opens serial port, sets data rate to 9600 bps
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(13, OUTPUT);
+
+}
+
+void loop() {
+
+  // send data only when you receive data:
+  if (Serial.available() > 0) {
+    // read the incoming byte:
+    // incoming = Serial.read();
+    Serial.println("Lampe mach was");
+    // say what you got:
+    incoming = Serial.read();
+    if(incoming == 'L'){
+    Serial.println(incoming, DEC);
+    digitalWrite(7, HIGH);
+    digitalWrite(8, HIGH);
+    digitalWrite(13, HIGH);
+    Serial.print("Lampe an");
+    }else{
+    delay(1000);
+    digitalWrite(7, LOW);
+    digitalWrite(8, LOW);
+    digitalWrite(13, LOW);
+    Serial.print("Lampe aus");
+    }
+    delay(1000);
+  }
+}
+

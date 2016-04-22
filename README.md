@@ -39,3 +39,9 @@ to switch back to the main branch
 (results in having access to the files of the master branche)
 
 
+
+#How to run the project
+cd node_js
+npm install
+node index.js
+
