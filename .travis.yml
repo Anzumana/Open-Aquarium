@@ -9,5 +9,4 @@ notifications:
       - anzumana:AmoYKjOF7aQ7DKZDCyMTrvqc#general
     on_success: never # default: always
     on_failure: always # default: always
-    on_start: always   # default: never
 script: cd node_js && npm install && npm test
