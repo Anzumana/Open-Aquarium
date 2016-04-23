@@ -46,3 +46,8 @@ cd node_js
 npm install
 node index.js
 
+
+#Firmata
+For your ProximitySensor to work we need the [PingFirmata](http://johnny-five.io/api/proximity/#pingfirmata)
+
+
