@@ -1,6 +1,10 @@
 language: node_js
+
 node_js:
   - "5"
+
 notifications:
-    slack: anzumana:AmoYKjOF7aQ7DKZDCyMTrvqc
+    slack:
+      on_failure: anzumana:AmoYKjOF7aQ7DKZDCyMTrvqc
+
 script: cd node_js && npm install && npm test
