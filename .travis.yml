@@ -4,10 +4,7 @@ node_js:
   - "5"
 
 notifications:
-    slack:
-      rooms:
-        - anzumana: "AmoYKjOF7aQ7DKZDCyMTrvqc#open-aquarium"
-      on_failure: always
-      on_success: never
-
+  slack:
+    rooms:
+      - anzumana:AmoYKjOF7aQ7DKZDCyMTrvqc#general
 script: cd node_js && npm install && npm test
