@@ -1,4 +1,5 @@
 # Open-Aquarium
+[![Build Status](https://travis-ci.org/Anzumana/Open-Aquarium.svg?branch=master)](https://travis-ci.org/Anzumana/Open-Aquarium)
 
 [Project Website](http://anzumana.github.io/Open-Aquarium/)
 
