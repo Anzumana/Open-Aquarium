@@ -1,4 +1,4 @@
-var five = require("johnny-five");
+var five = require("johnny-five")
 
 five.Board().on("ready", function() {
 	// read the current Temperature
