@@ -1,7 +1,10 @@
 {
-	"name":"nodeandjohnnyfive",
-	"version":"0.0.1",
-	"dependencies":{
-		"johnny-five":"latest"
-	}
+  "name": "nodeandjohnnyfive",
+  "version": "0.0.1",
+  "dependencies": {
+    "johnny-five": "latest"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.2"
+  }
 }
