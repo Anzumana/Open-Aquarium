@@ -1,0 +1,12 @@
+{
+  "name": "learn-travis-YOURNAME",
+  "description": "Simple Travis-CI check for JSHint (Code Linting)",
+  "author": "Anzumana",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jshint": "^2.9.2"
+  },
+  "scripts": {
+    "test": "./node_js/node_modules/jshint/bin/jshint ./node_js/index.js" 
+  }
+}
