@@ -5,8 +5,9 @@ node_js:
 
 notifications:
     slack:
+      rooms:
+        - anzumana: "AmoYKjOF7aQ7DKZDCyMTrvqc"
       on_failure: always
-      on_success : never
-      anzumana:AmoYKjOF7aQ7DKZDCyMTrvqc
+      on_success: never
 
 script: cd node_js && npm install && npm test
