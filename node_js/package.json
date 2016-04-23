@@ -2,6 +2,7 @@
   "name": "nodeandjohnnyfive",
   "version": "0.0.1",
   "author": "anzumana",
+  "description": "Javascript Johnny Five Code for our Arduino Board",
   "dependencies": {
     "johnny-five": "latest"
   },
