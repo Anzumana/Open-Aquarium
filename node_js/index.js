@@ -1,3 +1,4 @@
+/*jshintsversion: 6 */
 var five = require("johnny-five");
 const ALLOWED_DISTANCE  = 5;//in cm
 
