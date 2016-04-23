@@ -6,7 +6,7 @@ node_js:
 notifications:
   slack:
     rooms:
-      - anzumana:AmoYKjOF7aQ7DKZDCyMTrvqc#open-aquarium
+      - anzumana:AmoYKjOF7aQ7DKZDCyMTrvqc#open_aquarium
     on_success: never # default: always
     on_failure: always # default: always
 script: cd node_js && npm install && npm test
