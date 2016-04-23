@@ -6,7 +6,7 @@ node_js:
 notifications:
     slack:
       rooms:
-        - anzumana: "AmoYKjOF7aQ7DKZDCyMTrvqc"
+        - anzumana: AmoYKjOF7aQ7DKZDCyMTrvqc
       on_failure: always
       on_success: never
 
