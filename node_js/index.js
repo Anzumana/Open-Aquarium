@@ -1,6 +1,24 @@
 var five = require("johnny-five");
+const ALLOWED_DISTANCE  = 5;//in cm
 
 five.Board().on("ready", function() {
+	  var proximity = new five.Proximity({
+    controller: "HCSR04",
+    pin: 7,
+  });
+var a;
+
+
+  proximity.on("change", function() {
+		console.log("Proximity:" + this.cm);
+		var distanceToObject = this.cm;
+		if(distanceToObject < ALLOWED_DISTANCE){
+			asuroStop();
+		}
+  });
+	//Define Varaibles for all the pins that we need to talk too
+	//samplePin 13 since we can always test with this one
+	var led = new five.Led(13);
 	// 
 	currentTime();
 	initAsuro();
@@ -9,13 +27,18 @@ five.Board().on("ready", function() {
 		checkProximity();
 		checkLigh();
 		checkMovement();
-	},1000);
+	},5000);
+	function asuroStop(){
+		console.log("asuroSTop");
+		console.log(arguments.callee);
+	}
 	/**
 	 * Funtion for our initial Setup
 	 *
 	 */
 	function initAsuro(){
 		console.log(arguments.callee);
+		lightsOn();
 	}
 	/**
 	 * Simple Function with console log of foo string
@@ -72,14 +95,17 @@ five.Board().on("ready", function() {
 		*
 	*/
 	function lightsOn(){
-
+		led.on();
+	}
+	function lightsOff(){
+		led.off();
 	}
 	this.repl.inject({
 		lightsOn: function(){
 			lightsOn();
 		},
 		lightsOff: function(){
-			lightsOfff();
+			lightsOff();
 		},
 		foo: function(){
 			foo();
