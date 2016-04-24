@@ -3,6 +3,8 @@ var five = require("johnny-five"),
 		board, photoresistor;
 const ALLOWED_DISTANCE  = 5;//in cm
 const TO_DARK_THRESHOLD = 1000;
+var asuro = {};
+asuro.lighs = "off";
 
 five.Board().on("ready", function() {
 	////////// Phtotoresitor Sensor //////////
@@ -10,7 +12,7 @@ five.Board().on("ready", function() {
     pin: "A2",
     freq: 250
   });
-	photoresistor.on("data", function() {
+	photoresistor.on("change", function() {
 	// smaller number means more light
 		var currentAmoutOfLight = this.value;
 		if(currentAmoutOfLight>TO_DARK_THRESHOLD){
@@ -102,6 +104,7 @@ five.Board().on("ready", function() {
 			controller: "TMP36",
 			pin: "A0"
 		});
+		// we leave on data here until the sensor is working
   	temperature.on("data", function() {
     console.log(this.celsius + "°C", this.fahrenheit + "°F");
   	});
@@ -112,11 +115,19 @@ five.Board().on("ready", function() {
 	*/
 	function lightsOn(){
 		console.log(arguments.callee);
-		led.on();
+		if(asuro.lights=="off"){
+			led.on();
+			asuro.lights = "on"
+		} else{
+		}
 	}
 	function lightsOff(){
 		console.log(arguments.callee);
-		led.off();
+		if(asuro.lights =="on"){
+			led.off();
+			asuro.lights = "off"
+		} else{
+		}
 	}
 	this.repl.inject({
 		lightsOn: function(){
