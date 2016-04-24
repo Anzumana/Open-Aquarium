@@ -1,6 +1,6 @@
 ---
 title: Arduino Here We Go
-layout: default
+layout: posts
 ---
 Today we go started using the Arduino.
 We decided on using [johnny five js ](https://github.com/rwaldron/johnny-five)
