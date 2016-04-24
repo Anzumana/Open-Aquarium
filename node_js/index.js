@@ -7,7 +7,30 @@ var asuro = {};
 asuro.lighs = "off";
 
 five.Board().on("ready", function() {
+  // Create a new `motion` hardware instance.
+	////////// Motion Sensor //////////
+  var motion = new five.Motion(7);
+
+  // "calibrated" occurs once, at the beginning of a session,
+  motion.on("calibrated", function() {
+    console.log("calibrated");
+  });
+
+  // "motionstart" events are fired when the "calibrated"
+  // proximal area is disrupted, generally by some form of movement
+  motion.on("motionstart", function() {
+    console.log("motionstart");
+		asuroHalt();
+  });
+
+  // "motionend" events are fired following a "motionstart" event
+  // when no movement has occurred in X ms
+  motion.on("motionend", function() {
+    console.log("motionend");
+		asuroContinue();
+  });
 	////////// Phtotoresitor Sensor //////////
+/*
   photoresistor = new five.Sensor({
     pin: "A2",
     freq: 250
@@ -22,6 +45,7 @@ five.Board().on("ready", function() {
 		}
 		console.log("Photoresistor" + this.value);
 	});
+*/
 	////////// Proximity Sensor //////////
   var proximity = new five.Proximity({
     controller: "HCSR04",
@@ -48,6 +72,14 @@ five.Board().on("ready", function() {
 	},5000);
 	function asuroStop(){
 		console.log("asuroSTop");
+		console.log(arguments.callee);
+	}
+	function asuroHalt(){
+		console.log("asuroHalt");
+		console.log(arguments.callee);
+	}
+	function asuroContinue(){
+		console.log("asuroContinue");
 		console.log(arguments.callee);
 	}
 	/**
