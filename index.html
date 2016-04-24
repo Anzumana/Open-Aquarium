@@ -25,7 +25,7 @@
         <h1>Open-aquarium</h1>
 				<h2>{{site.github.url}}</h2>
 				<h2>{{page.url}}</h2>
-				<h2>{{site.baseurl}}{{post.url}}</h2>
+				<h1>{{site.baseurl}}{{post.url}}</h2>
 
         <a href="https://github.com/Anzumana/Open-Aquarium" class="button"><small>View project on</small> GitHub</a>
       </div>
@@ -45,7 +45,7 @@
 	Read our latest Progress Logs ( Blog )
 </h3>
 <ul>
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
