@@ -1,15 +1,30 @@
 /*jshint esversion: 6 */
-var five = require("johnny-five");
+var five = require("johnny-five"),
+		board, photoresistor;
 const ALLOWED_DISTANCE  = 5;//in cm
+const TO_DARK_THRESHOLD = 1000;
 
 five.Board().on("ready", function() {
-	  var proximity = new five.Proximity({
+	////////// Phtotoresitor Sensor //////////
+  photoresistor = new five.Sensor({
+    pin: "A2",
+    freq: 250
+  });
+	photoresistor.on("data", function() {
+	// smaller number means more light
+		var currentAmoutOfLight = this.value;
+		if(currentAmoutOfLight>TO_DARK_THRESHOLD){
+			lightsOn();
+		} else{
+			lightsOff();
+		}
+		console.log("Photoresistor" + this.value);
+	});
+	////////// Proximity Sensor //////////
+  var proximity = new five.Proximity({
     controller: "HCSR04",
     pin: 7,
   });
-var a;
-
-
   proximity.on("change", function() {
 		console.log("Proximity:" + this.cm);
 		var distanceToObject = this.cm;
@@ -96,9 +111,11 @@ var a;
 		*
 	*/
 	function lightsOn(){
+		console.log(arguments.callee);
 		led.on();
 	}
 	function lightsOff(){
+		console.log(arguments.callee);
 		led.off();
 	}
 	this.repl.inject({
