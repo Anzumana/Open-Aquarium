@@ -1,3 +1,7 @@
+---
+title: This is my title
+layout: default
+---
 Today we go started using the Arduino.
 We decided on using [johnny five js ](https://github.com/rwaldron/johnny-five)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8s2--hfsJDY" frameborder="0" allowfullscreen></iframe>
