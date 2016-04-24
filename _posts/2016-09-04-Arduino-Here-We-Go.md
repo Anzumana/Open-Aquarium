@@ -1,5 +1,5 @@
 ---
-title: This is my title
+title: Arduino Here We Go
 layout: default
 ---
 Today we go started using the Arduino.
