@@ -117,7 +117,7 @@ five.Board().on("ready", function() {
 		console.log(arguments.callee);
 		if(asuro.lights=="off"){
 			led.on();
-			asuro.lights = "on"
+			asuro.lights = "on";
 		} else{
 		}
 	}
@@ -125,7 +125,7 @@ five.Board().on("ready", function() {
 		console.log(arguments.callee);
 		if(asuro.lights =="on"){
 			led.off();
-			asuro.lights = "off"
+			asuro.lights = "off";
 		} else{
 		}
 	}
