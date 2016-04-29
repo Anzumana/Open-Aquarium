@@ -45,6 +45,7 @@
   {% for post in site.posts %}
     <li>
       <a href="{{site.baseurl}} {{ post.url }}">{{ post.title }}</a>
+      <p>{{site.baseurl}} and {{post.title}}</p>
     </li>
   {% endfor %}
 </ul>
